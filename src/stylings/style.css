@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button-input {
+        @apply rounded-md border-2 text-sm py-1 w-full
+    }
+    .button-input__submit {
+        @apply button-input border-[#2f415b] hover:text-cyan-300 hover:border-[#56b5c6c9];
+    }
+    .button-input__submit:hover {
+        box-shadow: 0px 0px 3px 0px rgba(86,181,198,0.5);
+    }
+    .button-input__delete {
+        @apply button-input text-[#e69a9a] border-[#5b2f2f] hover:text-red-400 hover:border-[#c65656c9];
+    }
+    .button-input__delete:hover {
+        box-shadow: 0px 0px 3px 0px rgba(198,86,86,0.5);
+    }
+    .button-input__move {
+        @apply button-input text-[#e6de9a] border-[#5b582f] hover:text-yellow-300 hover:border-[#c6b556c9];
+    }
+    .button-input__move:hover {
+        box-shadow: 0px 0px 3px 0px rgba(198,194,86,0.5);
+    }
+    .hr-line {
+        @apply w-full border-[#2f415bb2];
+    }
+    .text-input {
+        @apply resize-none rounded-md text-[#eaecf0] bg-[#334155]
+    }
+    .notes-container {
+        @apply flex flex-col justify-between gap-3 p-5 rounded-xl shadow-lg text-[#9ab8e6] bg-[#15273f]
+    }
+    .notes-list {
+        @apply grid grid-cols-1 lg:grid-cols-2 max-h-96 lg:max-h-[40rem] w-full overflow-auto gap-4
+    }
+}
